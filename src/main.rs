@@ -137,29 +137,9 @@ fn event(app: &App, model: &mut Model, event: Event) {
                         delta,
                         speed,
                     ),
-                    Key::Space => {
-                        if model.camera.position.y == 0.0 {
-                            model.vert_velocity = 10.0;
-                        }
-                    }
                     Key::Escape => {}
                     _ => {}
                 }
-            }
-
-            println!("{:#?}", update);
-            print!("\x1B[2J\x1B[1;1H");
-
-            let gravity = 1.0;
-
-            let up = vec3(0.0, 1.0, 0.0);
-            let jump_movement = up * (model.vert_velocity / (delta * delta));
-            model.camera.position += jump_movement;
-
-            model.vert_velocity -= gravity;
-            if model.camera.position.y < 0.0 {
-                model.camera.position.y = 0.0;
-                model.vert_velocity = 0.0;
             }
         }
         _ => {}
