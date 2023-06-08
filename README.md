@@ -11,3 +11,6 @@ cargo build --release
 OR
 cargo run --release
 ```
+
+## demo
+![lorenz](https://github.com/flexiiwiki/lorenz-rust/assets/100071255/80f47f50-8c7d-40d6-b71d-210e6a365a30)
